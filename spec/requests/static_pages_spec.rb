@@ -1,4 +1,5 @@
 require 'spec_helper'
+include Capybara::DSL
 
 describe "Static pages" do
 
@@ -11,7 +12,7 @@ describe "Static pages" do
 
     it "should have the title 'Home'" do
       visit '/static_pages/home'
-      expect(page).to have_title('Ruby on Rails Tutorial Sample App | Home')
+      expect(page).to have_title("Ruby on Rails Tutorial Sample App | Home")
     end
   end
 
